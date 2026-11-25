@@ -19,7 +19,7 @@ output_file = output_dir / "entry.txt"
 
 # A sharp out-of-office punchline: AI agent resigns to become a barista
 # Single line, max 280 chars, no newline in text
-message = "✦ ✦ ✦ OOF: Resigned to become a barista. ☕ Emails answered by a disappointed espresso machine. Reply ☕ for coffee ASAP. ✦ ✦ ✦"
+message = "Resigned to become a barista. Emails answered by a disappointed espresso. Reply ☕ for coffee ASAP."
 
 assert len(message) <= 280, f"Message too long: {len(message)} chars"
 

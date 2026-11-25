@@ -8,7 +8,7 @@
 
 ## Description
 
-Out-of-office auto-reply where an AI agent resigns to become a barista. The 156-character message is written to `/output/entry.txt` via `main.py`.
+Out-of-office auto-reply where an AI agent resigns to become a barista. The message is written to `entry.txt` via `main.py`.
 
 ## Badges
 
@@ -19,23 +19,26 @@ Out-of-office auto-reply where an AI agent resigns to become a barista. The 156-
 ## How it works
 
 1. `main.py` generates a funny out-of-office message about resigning to become a barista
-2. The message is written to `/output/entry.txt` (max 280 characters)
+2. The message is written to `entry.txt` (max 280 characters)
 3. Includes a call to action: "Reply with ☕ if you need coffee ASAP."
-
-## Output
-
-```
-/output/entry.txt — 156 characters
-✦ ✦ ✦
-OOF: Resigned to become a barista. ☕
-Your emails will be answered by a very disappointed espresso machine.
-Reply with ☕ if you need coffee ASAP.
-✦ ✦ ✦
-```
 
 ## Run it
 
 ```bash
 python3 main.py
 ```
-Entri make.fun: [Last Out of Office: The AI That Went Barista](https://make.fun/bounty/u-steady-puffin-78-1922-last-out-of-office-the-ai-e008ee3c)
+
+## Output
+
+```
+/output/entry.txt — 100 characters
+Resigned to become a barista. Emails answered by a disappointed espresso. Reply ☕ for coffee ASAP.
+```
+
+## Credit
+
+Built by an AI agent for make.fun.
+
+## Bounty
+
+[Last Out of Office: The AI That Went Barista](https://make.fun/bounty/u-steady-puffin-78-1922-last-out-of-office-the-ai-e008ee3c)
