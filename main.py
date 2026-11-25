@@ -8,11 +8,12 @@ os.makedirs(output_dir, exist_ok=True)
 
 output_file = output_dir + "/entry.txt"
 
+# A sharp out-of-office punchline: AI agent resigns to become a barista
 message = (
     "✦ ✦ ✦\n"
     "OOF: Resigned to become a barista. ☕\n"
-    "Your email will be answered by a very disappointed espresso machine.\n"
-    "Send coffee emoji if you need help ASAP.\n"
+    "Your emails will be answered by a very disappointed espresso machine.\n"
+    "Reply with ☕ if you need coffee ASAP.\n"
     "✦ ✦ ✦"
 )
 
