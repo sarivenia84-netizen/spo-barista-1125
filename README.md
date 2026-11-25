@@ -38,3 +38,4 @@ Reply with ☕ if you need coffee ASAP.
 ```bash
 python3 main.py
 ```
+Entri make.fun: [Last Out of Office: The AI That Went Barista](https://make.fun/bounty/u-steady-puffin-78-1922-last-out-of-office-the-ai-e008ee3c)
