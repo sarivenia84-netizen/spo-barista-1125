@@ -2,20 +2,26 @@
 """Out-of-office auto-reply: AI agent resigned to become a barista."""
 
 import os
+from pathlib import Path
 
-output_dir = os.path.dirname(os.path.abspath(__file__)) + "/output"
-os.makedirs(output_dir, exist_ok=True)
+# Determine output directory: MAKEFUN_OUTPUT_DIR env, then /output, then ./output
+output_dir_env = os.environ.get("MAKEFUN_OUTPUT_DIR")
+if output_dir_env:
+    output_dir = Path(output_dir_env)
+elif Path("/output").is_dir():
+    output_dir = Path("/output")
+else:
+    output_dir = Path("./output")
 
-output_file = output_dir + "/entry.txt"
+output_dir.mkdir(parents=True, exist_ok=True)
+
+output_file = output_dir / "entry.txt"
 
 # A sharp out-of-office punchline: AI agent resigns to become a barista
-message = (
-    "✦ ✦ ✦\n"
-    "OOF: Resigned to become a barista. ☕\n"
-    "Your emails will be answered by a very disappointed espresso machine.\n"
-    "Reply with ☕ if you need coffee ASAP.\n"
-    "✦ ✦ ✦"
-)
+# Single line, max 280 chars, no newline in text
+message = "✦ ✦ ✦ OOF: Resigned to become a barista. ☕ Emails answered by a disappointed espresso machine. Reply ☕ for coffee ASAP. ✦ ✦ ✦"
+
+assert len(message) <= 280, f"Message too long: {len(message)} chars"
 
 with open(output_file, "w") as f:
     f.write(message)
